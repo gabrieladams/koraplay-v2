@@ -1,0 +1,186 @@
+.section {
+  background-color: #f4f7ff;
+
+  .modalBtn {
+    box-shadow: none;
+    padding: 12px 64px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 1050;
+
+  .modalBackdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+
+    // animation-name: fadeOut;
+    // animation-duration: 0.3s;
+    // animation-timing-function: linear;
+    // animation-direction: normal;
+    // animation-fill-mode: backwards;
+
+    // transition: opacity 0.25s ease-in 0s;
+  }
+
+  .modalBox {
+    position: relative;
+
+    border-radius: 4px;
+    background-color: #fff;
+
+    transform: translateY(-20%);
+
+    // transition: transform 0.25s ease-in 0s;
+
+    // animation-name: rollBack;
+    // animation-duration: 0.3s;
+    // animation-timing-function: linear;
+    // animation-direction: normal;
+    // animation-fill-mode: backwards;
+
+    form {
+      padding: 35px;
+
+      label {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      input,
+      textarea {
+        display: block;
+
+        outline: none;
+        border: 2px solid #c4c4c4;
+        border-radius: 4px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      input,
+      textarea {
+        &:hover,
+        &:focus {
+          border-color: var(--theme-color);
+        }
+      }
+
+      button {
+        padding: 12px;
+        width: 100%;
+      }
+    }
+
+    .closeModalBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      outline: none;
+      border: none;
+      width: 30px;
+      height: 30px;
+
+      border-radius: 50%;
+
+      background-color: #eaeaea;
+
+      .icon {
+        color: #979797;
+        transition: color 0.05s ease-in 0s;
+      }
+
+      &:hover {
+        background-color: var(--theme-color);
+
+        .icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.showModal {
+    display: block;
+
+    .modalBackdrop {
+      animation-name: fadeIn;
+      animation-duration: 0.3s;
+      animation-timing-function: linear;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+
+    .modalBox {
+      animation-name: DropIn;
+      animation-duration: 0.3s;
+      animation-timing-function: linear;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes DropIn {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes rollBack {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}

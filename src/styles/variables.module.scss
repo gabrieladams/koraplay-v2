@@ -1,0 +1,35 @@
+// MEDIA QUERIES START
+$mobile: 576px;
+
+$small-tablet-start: 577px;
+$small-tablet-end: 767px;
+
+$medium-tablet-start: 768px;
+$medium-tablet-end: 991px;
+
+$large-tablet-start: 992px;
+$large-tablet-end: 1999px;
+
+$laptop-start: 1200px;
+$laptop-end: 1399px;
+
+$desktop: 1400px;
+
+:export {
+  mobile: $mobile;
+
+  smallTabletStart: $small-tablet-start;
+  smallTabletEnd: $small-tablet-end;
+
+  mediumTabletStart: $medium-tablet-start;
+  mediumTabletEnd: $medium-tablet-end;
+
+  largeTabletStart: $large-tablet-start;
+  $largeTabletEnd: $large-tablet-end;
+
+  laptopStart: $laptop-start;
+  laptopEnd: $laptop-end;
+
+  desktop: $desktop;
+}
+// MEDIA QUERIES END

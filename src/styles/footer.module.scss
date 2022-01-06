@@ -1,0 +1,31 @@
+.footer {
+  padding: 60px 0px 40px;
+
+  color: #fff !important;
+
+  background-color: #201f1f;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: var(--theme-color);
+    }
+  }
+
+  .followUsText {
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+
+      transform: translate(-130%, -50%);
+    }
+  }
+}

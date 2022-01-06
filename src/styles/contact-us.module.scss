@@ -1,0 +1,47 @@
+@import './mixins';
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  background-image: url(../assets/images/token-functions-bg-img.webp);
+
+  @include backgroundImage;
+
+  @include smallTabletAndBelow {
+    padding-top: 80px;
+  }
+
+  form {
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      display: block;
+
+      outline: none;
+      border: 1px solid #c4c4c4;
+      border-radius: 4px;
+      padding: 12px;
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      &:hover,
+      &:focus {
+        border-color: var(--theme-color);
+      }
+    }
+
+    button {
+      padding: 12px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import './variables.module.scss';
+
+// MEDIA QUERIES
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin smallTablet {
+  @media (min-width: #{$small-tablet-start}) and (max-width: #{$small-tablet-end}) {
+    @content;
+  }
+}
+@mixin smallTabletAndAbove {
+  @media (min-width: #{$small-tablet-start}) {
+    @content;
+  }
+}
+@mixin smallTabletAndBelow {
+  @media (max-width: #{$small-tablet-end}) {
+    @content;
+  }
+}
+
+@mixin mediumTablet {
+  @media (min-width: #{$medium-tablet-start}) and (max-width: #{$medium-tablet-end}) {
+    @content;
+  }
+}
+@mixin upTomediumTablet {
+  @media (max-width: #{$medium-tablet-end}) {
+    @content;
+  }
+}
+@mixin mediumTabletAndAbove {
+  @media (min-width: #{$medium-tablet-start}) {
+    @content;
+  }
+}
+@mixin mediumTabletAndBelow {
+  @media (max-width: #{$medium-tablet-end}) {
+    @content;
+  }
+}
+
+@mixin largeTablet {
+  @media (min-width: #{$large-tablet-start}) and (max-width: #{$large-tablet-end}) {
+    @content;
+  }
+}
+@mixin largeTabletAndAbove {
+  @media (min-width: #{$large-tablet-start}) {
+    @content;
+  }
+}
+@mixin largeTabletAndBelow {
+  @media (max-width: #{$large-tablet-end}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop-start}) and (max-width: #{$laptop-end}) {
+    @content;
+  }
+}
+@mixin laptopAndAbove {
+  @media (min-width: #{$laptop-start}) {
+    @content;
+  }
+}
+@mixin laptopAndBelow {
+  @media (max-width: #{$laptop-end}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// BACKGROUND IMAGE
+@mixin backgroundImage {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,66 @@
+@import './mixins';
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  background-image: url(../assets/images/our-solutions-careers-bg-img.webp);
+
+  @include backgroundImage;
+
+  @include smallTabletAndBelow {
+    padding-top: 80px;
+  }
+
+  .job {
+    border-bottom: 2px solid #eaeaea;
+
+    transition: border-color 0.25s ease-in 0s;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .linkBtn {
+      box-shadow: none;
+      border: 1px solid #7a7a7a;
+      border-radius: 3px;
+
+      font-size: 14px;
+      // color: #071e3b;
+      color: #7a7a7a;
+
+      background-color: transparent;
+
+      transition: all 0.25s ease-in 0s;
+    }
+
+    .icon {
+      color: #7a7a7a;
+
+      transition: color 0.25s ease-in 0s;
+    }
+
+    &:hover {
+      border-color: var(--theme-color);
+
+      .job_title_type {
+        color: var(--theme-color);
+
+        transition: color 0.25s ease-in 0s;
+      }
+
+      .icon {
+        color: var(--theme-color);
+      }
+
+      .linkBtn {
+        border-color: var(--theme-color);
+
+        color: #fff;
+
+        background-color: var(--theme-color);
+      }
+    }
+  }
+}

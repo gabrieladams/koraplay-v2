@@ -1,0 +1,21 @@
+@import './mixins';
+
+.featuresSection {
+  // padding: 80px 0px;
+  margin-top: -100px;
+
+  background-image: url(../assets/images/features-section/bg-img.webp);
+  @include backgroundImage;
+
+  @include smallTabletAndBelow {
+    margin-top: -20px;
+  }
+}
+
+.feature {
+  padding: 60px 0px;
+
+  @include mediumTabletAndBelow {
+    padding: 35px 0px;
+  }
+}

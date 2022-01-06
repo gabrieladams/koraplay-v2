@@ -1,0 +1,306 @@
+// @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;800&display=swap');
+
+@import './mixins';
+
+:root {
+  // COLORS
+  --theme-color: #7e3fea;
+  --font-color: #071e3b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  transition: all 0.25s ease-in 0s;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border-radius: 4px;
+
+  font-size: 15px;
+  line-height: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// UTILITIES START
+//MARGIN
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+// COLOR
+.color-theme {
+  color: var(--theme-color);
+}
+.bg-color-theme {
+  background-color: var(--theme-color);
+}
+
+// FONTS
+// wEIGHT
+.fw-300 {
+  font-weight: 300 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
+}
+
+//SIZES
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-15 {
+  font-size: 15px !important;
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+// TRANSITION
+.transition-25s {
+  transition: all 0.25s ease-in 0s;
+}
+
+// BORDER RADIUS
+.border-radius {
+  border-radius: 4px;
+}
+
+// navBAR STICKY
+.navbar-sticky {
+  box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.15);
+
+  background-color: #fff;
+
+  .largeTabletNavBarNav {
+    .navItem {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// SECTION
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include smallTabletAndBelow {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+// UTILITIES END
+
+// COMPONENT START
+// BUTTON
+.button {
+  display: inline-block;
+
+  box-shadow: 0px 10px 25px rgba($color: #390397, $alpha: 0.2);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 19px;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  color: #fff;
+
+  background-color: var(--theme-color);
+
+  transition: all 0.3s ease-in 0s;
+
+  &:hover {
+    background-color: rgba(126, 63, 234, 0.8);
+  }
+}
+
+// PAGE TITLE UNDERLINE
+.page-title-underline {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 38px;
+  font-weight: 800;
+
+  @include smallTabletAndBelow {
+    font-size: 36px;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+
+    width: 60px;
+    height: 3px;
+
+    background-color: var(--theme-color);
+
+    transform: translateX(-50%);
+  }
+}
+
+// SECTION TITLE UNDERLINE
+.section-title-underline {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 36px;
+  font-weight: 800;
+
+  @include smallTabletAndBelow {
+    font-size: 32px;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+
+    width: 50px;
+    height: 3px;
+
+    background-color: var(--theme-color);
+
+    transform: translateX(-50%);
+  }
+}
+
+// OUTLINE LIST
+.outline-list {
+  &.landing-section {
+    margin-bottom: 36px;
+  }
+
+  .list-item {
+    display: flex;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon-container {
+      .icon-container-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.15);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+
+        background-color: #fff;
+      }
+    }
+
+    .list-item-info {
+      margin: 0;
+      padding-left: 10px;
+    }
+  }
+}
+// COMPONENT END
+
+// FAQS ACCORDION
+.accordion.faqs {
+  min-height: 300px;
+
+  .accordion-item {
+    border-bottom-width: 2px;
+    background-color: transparent;
+
+    .accordion-button {
+      outline: none;
+      border: 0;
+
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--font-color);
+
+      background-color: transparent;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:not(.collapsed) {
+        padding-bottom: 8px;
+        color: var(--theme-color);
+      }
+    }
+
+    .accordion-body {
+      padding-top: 8px;
+    }
+
+    &:hover {
+      border-color: var(--theme-color);
+
+      .accordion-button {
+        color: var(--theme-color);
+      }
+    }
+  }
+}
+
+// ANIMATION
+.fadeIn {
+  animation: fadeIn 0.5s linear;
+}
+
+// KEYFRAMES
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

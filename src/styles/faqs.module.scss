@@ -1,0 +1,11 @@
+@import './mixins';
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-image: url(../assets/images/faqs-bg-img.webp);
+
+  @include backgroundImage;
+  background-attachment: fixed;
+}

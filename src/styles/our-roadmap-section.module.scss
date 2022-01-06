@@ -1,0 +1,117 @@
+@import './mixins';
+
+.ourRoadmapSection {
+  color: #fff !important;
+
+  background-image: url(../assets/images/our-roadmap-section/bg-img.webp);
+
+  @include backgroundImage;
+
+  .sectionTitle {
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+  .goalStatusSymbol {
+    display: inline-block;
+
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+
+    background-color: red;
+
+    &.inProgress {
+      background-color: #eef476;
+    }
+
+    &.completed {
+      background-color: #12c38c;
+    }
+  }
+
+  .milestoneContainer {
+    position: relative;
+
+    margin-top: 60px;
+    width: 50%;
+
+    @include smallTabletAndBelow {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    @include mediumTablet {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .list {
+      list-style-type: disc;
+    }
+
+    .milestone {
+      margin-left: 18%;
+
+      @include mediumTabletAndBelow {
+        margin-left: 0;
+      }
+
+      .imgContainer {
+        position: absolute;
+        top: 0;
+
+        z-index: 3;
+      }
+
+      &.milestoneRight {
+        .imgContainer {
+          left: 0;
+
+          transform: translateX(-50%);
+        }
+      }
+
+      &.milestoneLeft {
+        .imgContainer {
+          right: 0;
+
+          transform: translateX(50%);
+        }
+      }
+    }
+  }
+
+  .lineY {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: block;
+    width: 2px;
+    height: 100%;
+
+    background-color: #fff;
+
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .lineYDot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: block;
+
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+
+    background-color: var(--theme-color);
+
+    transform: translate(-50%, -98%);
+    z-index: 2;
+  }
+}

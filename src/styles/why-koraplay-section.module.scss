@@ -1,0 +1,25 @@
+@import './mixins';
+
+.section {
+  padding: 80px 0;
+
+  background-image: url(../assets/images/why-koraplay-section/bg-img.webp);
+
+  @include backgroundImage;
+
+  .sectionHeader {
+    .imgContainer {
+      position: absolute;
+      top: -50px;
+      left: -30px;
+
+      display: block;
+    }
+  }
+
+  .item {
+    padding: 30px;
+
+    background-color: #f2f5fb;
+  }
+}

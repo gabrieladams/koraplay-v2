@@ -1,0 +1,29 @@
+@import './mixins';
+
+.setBgImage {
+  padding-top: 120px;
+
+  background-image: url(../assets/images/our-solutions-careers-bg-img.webp);
+
+  @include backgroundImage;
+
+  @include smallTabletAndBelow {
+    padding-top: 80px;
+  }
+}
+
+.linkBtn {
+  box-shadow: none;
+  border: 1px solid var(--theme-color);
+  padding: 12px 24px;
+
+  color: var(--theme-color);
+
+  background-color: transparent;
+
+  &:hover {
+    color: #fff;
+
+    background-color: var(--theme-color);
+  }
+}

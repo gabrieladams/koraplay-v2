@@ -1,0 +1,55 @@
+@import './mixins';
+
+.pageNotFound {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url(../assets/images/404/bg-img.webp);
+  @include backgroundImage;
+
+  z-index: 1000;
+
+  @include smallTabletAndBelow {
+    // background-image: url(../assets/images/404/404-mobile-img.webp);
+  }
+
+  .logoContainer {
+    margin-top: 8px;
+
+    @include smallTabletAndBelow {
+      margin-bottom: 90px;
+    }
+  }
+
+  .pageNotFoundInfo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    text-align: center;
+    color: #fff;
+
+    transform: translate(-230px, 100px);
+
+    @include smallTabletAndBelow {
+      width: 100%;
+      transform: translate(-50%, 50%);
+    }
+
+    button {
+      outline: 0;
+      border: 2px solid var(--theme-color);
+      border-radius: 4px;
+      padding: 8px 16px;
+
+      text-transform: uppercase;
+      color: #fff;
+
+      background-color: transparent;
+    }
+  }
+}

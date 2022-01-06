@@ -1,0 +1,39 @@
+.section {
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  .groupTitle {
+    font-size: 18px;
+  }
+
+  .memberCard {
+    width: 235px;
+    background-color: #f4f7ff;
+
+    .socialMediaIconContainer {
+      display: block;
+
+      width: 35px;
+      height: 35px;
+
+      background-color: #dadada;
+
+      transition: background-color 0.25s ease-in 0s;
+
+      .icon {
+        font-size: 14px;
+        color: #7a7a7a;
+
+        transition: color 0.1s ease-in 0s;
+      }
+
+      &:hover {
+        background-color: #fafafa;
+
+        & .icon {
+          color: var(--theme-color);
+        }
+      }
+    }
+  }
+}

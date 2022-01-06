@@ -1,0 +1,14 @@
+@import './mixins';
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  background-image: url(../assets/images/token-functions-bg-img.webp);
+
+  @include backgroundImage;
+
+  @include smallTabletAndBelow {
+    padding-top: 80px;
+  }
+}

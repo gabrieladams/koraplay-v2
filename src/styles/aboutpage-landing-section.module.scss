@@ -1,0 +1,55 @@
+@import './mixins';
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 40px;
+
+  background-image: url(../assets/images/about-page-landing-section/bg-img.webp);
+
+  @include backgroundImage;
+
+  @include smallTabletAndBelow {
+    padding-top: 80px;
+  }
+
+  .card {
+    position: relative;
+
+    border-radius: 4px;
+    padding: 64px 48px;
+
+    text-align: center;
+    color: #fff;
+
+    background-color: var(--theme-color);
+
+    @include mobile {
+      padding: 48px 16px;
+    }
+
+    @include smallTablet {
+      padding: 48px 24px;
+    }
+
+    @include mediumTablet {
+      padding: 48px;
+    }
+
+    p {
+      font-size: 28px;
+
+      @include smallTabletAndBelow {
+        font-size: 16px;
+        font-weight: normal !important;
+      }
+
+      @include mediumTablet {
+        font-size: 20px;
+      }
+
+      @include largeTablet {
+        font-size: 24px;
+      }
+    }
+  }
+}
